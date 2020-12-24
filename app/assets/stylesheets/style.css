@@ -1,0 +1,12 @@
+.top-page-header{
+    color: red;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-around;
+}
+
+.login-menu{
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid white;
+}
