@@ -8,5 +8,6 @@ class Review < ApplicationRecord
 
         with_options numericality: { other_than: 1 } do
             validates :evaluation_id
+        end
     end
 end
