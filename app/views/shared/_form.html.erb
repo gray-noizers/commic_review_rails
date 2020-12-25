@@ -1,0 +1,8 @@
+<%= form_with(model: @review, local: true) do |form| %>
+    <%= form.text_field :review_title, placeholder: "レビューのタイトル" %>
+    <%= form.text_field :commic_title, placeholder: "作品名" %>
+    <%= form.file_field :image, id:"review-image" %>
+    <%= form.text_area :text, placeholder: "text", rows: "10" %>
+    <%= form.collection_select(:evaluation_id, Evaluation.all, :id, :name, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
+    <%= form.submit "投稿する！" %>
+<% end %>
