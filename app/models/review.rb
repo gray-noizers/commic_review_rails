@@ -5,5 +5,8 @@ class Review < ApplicationRecord
         validates :review_title
         validates :commic_title
         validates :text
+
+        with_options numericality: { other_than: 1 } do
+            validates :evaluation_id
     end
 end
