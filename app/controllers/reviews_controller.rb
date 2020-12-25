@@ -8,13 +8,13 @@ class ReviewsController < ApplicationController
     end
 
     def create
-        @review = Review.new(review_params)
+        @review = Review.create(review_params)
         redirect_to root_path
     end
 
     private
 
     def review_params
-        params.require(:review).permit(:review_title, :commic_title, :text)
+        params.require(:review).permit(:review_title, :commic_title, :text, :evaluation_id)
     end
 end

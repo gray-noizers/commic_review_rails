@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_12_20_070044) do
     t.string "review_title", null: false
     t.string "commic_title", null: false
     t.text "text", null: false
-    t.integer "evaluation", null: false
+    t.integer "evaluation_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
