@@ -1,0 +1,6 @@
+<%= form_with(model: @review, local: true) do |form| %>
+    <%= form.text_field :review_title, placeholder: "レビューのタイトル" %>
+    <%= form.text_field :commic_title, placeholder: "作品名" %>
+    <%= form.text_area :text, placeholder: "text", rows: "10" %>
+    <%= form.submit "投稿する！" %>
+<% end %>

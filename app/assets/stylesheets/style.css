@@ -1,4 +1,6 @@
 .top-page-header{
+    padding: 20px;
+    font-size: large;
     color: red;
     background-color: yellow;
     display: flex;
@@ -6,7 +8,18 @@
 }
 
 .login-menu{
+    padding: 5px;
     display: flex;
     justify-content: flex-end;
-    border: 1px solid white;
+}
+
+li{
+    list-style: none;
+    color: red;
+    border: 1px solid red;
+}
+
+.index-image{
+    width: 100%;
+    height: auto;
 }
