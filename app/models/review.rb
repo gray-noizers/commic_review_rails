@@ -11,4 +11,5 @@ class Review < ApplicationRecord
             validates :evaluation_id
         end
     end
+    
 end
