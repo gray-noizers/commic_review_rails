@@ -9,7 +9,7 @@
 
 .login-menu{
     padding: 5px;
-    display: flex;
+    display: block;
     justify-content: flex-end;
 }
 
@@ -22,4 +22,9 @@ li{
 .index-image{
     width: 100%;
     height: auto;
+}
+
+.all-reviews{
+    display: flex;
+    flex-direction: column;
 }
