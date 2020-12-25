@@ -5,5 +5,14 @@
     <li><%= link_to '新規投稿', new_review_path, class: "login-menu" %></li>
     <li><%= link_to 'ログイン', new_review_path, class: "login-menu" %></li>
   </div>
+  <div class="reviews">
+    <% @review.each do |review| %>
+      <li class="all-reviews">
+        <%= image_tag review.image, class: "review-img" if review.image.attached? %>
+        <%= review.review_title %>
+        <%= review.commic_title %>
+      </li>
+    <% end %>
+  </div>
 </div>
 <%= render "shared/footer" %>
