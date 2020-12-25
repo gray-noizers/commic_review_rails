@@ -2,6 +2,8 @@
 <div class="main">
   <%= link_to image_tag"https://www.pakutaso.com/shared/img/thumb/PAK88_manganotana20141108161323_TP_V.jpg", class:"index-image" %>
   <div class="review-contents">
-
+    <li><%= link_to '新規投稿', new_review_path, class: "login-menu" %></li>
+    <li><%= link_to 'ログイン', new_review_path, class: "login-menu" %></li>
+  </div>
 </div>
 <%= render "shared/footer" %>
