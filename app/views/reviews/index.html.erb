@@ -2,13 +2,13 @@
 <div class="main">
   <%= link_to image_tag"https://www.pakutaso.com/shared/img/thumb/PAK88_manganotana20141108161323_TP_V.jpg", class:"index-image" %>
   <div class="review-contents">
-    <% if user_signed_in? %>
+    <%# if user_signed_in? %>
       <li><%= link_to '新規投稿', new_review_path, class: "login-menu" %></li>
-      <li><%= link_to 'ログアウト', new_review_path, class: "login-menu" %></li>
-    <% else %>
-      <li><%= link_to 'サインイン', new_review_path, class: "login-menu" %></li>
-      <li><%= link_to 'ログイン', new_review_path, class: "login-menu" %></li>
-    <% end %>
+      <li><%= link_to 'ログアウト', root_path, class: "login-menu" %></li>
+    <%# else %>
+      <li><%#= link_to 'サインイン', new_review_path, class: "login-menu" %></li>
+      <li><%#= link_to 'ログイン', new_review_path, class: "login-menu" %></li>
+    <%# end %>
   </div>
   <div class="reviews">
     <% @review.each do |review| %>
