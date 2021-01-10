@@ -1,6 +1,4 @@
 class ReviewsController < ApplicationController
-    before_action :move_to_index, except: [:index, :show]
-
     def index
         @review = Review.all
     end
@@ -18,11 +16,5 @@ class ReviewsController < ApplicationController
 
     def review_params
         params.require(:review).permit(:review_title, :commic_title, :text, :evaluation_id, :image)
-    end
-
-    def move_to_index
-        unless user_signed_in?
-          redirect_to action: :index
-        end
     end
 end
