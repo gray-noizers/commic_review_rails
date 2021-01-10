@@ -1,4 +1,5 @@
 class Review < ApplicationRecord
+
     has_one_attached :image
     
 
@@ -12,4 +13,5 @@ class Review < ApplicationRecord
             validates :evaluation_id
         end
     end
+    
 end
