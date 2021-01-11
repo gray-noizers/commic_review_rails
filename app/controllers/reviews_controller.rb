@@ -10,7 +10,8 @@ class ReviewsController < ApplicationController
     end
 
     def create
-        @review = Review.create(review_params)
+        @review = Review.new(review_params)
+        @review.save
         redirect_to root_path
     end
 
@@ -32,6 +33,9 @@ class ReviewsController < ApplicationController
     end
 
     def destroy
+        @review = Review.find(params[:id])
+        @review.destroy
+        redirect_to root_path
     end
 
     private
