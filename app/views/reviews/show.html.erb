@@ -6,4 +6,11 @@
     <%= @review.text %>
 </div>
 
+<div class="edit">
+    <% if @review.user != current_user %>
+        <li><%= link_to '編集する', edit_review_path, class: "login-menu" %></li>
+        <li><%= link_to '削除する', review_path(@review.id), method: :delete, class: "login-menu" %></li>
+    <% end %>
+</div>
+
 <%= render "shared/footer" %>

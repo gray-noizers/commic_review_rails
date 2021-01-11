@@ -10,12 +10,32 @@ class ReviewsController < ApplicationController
     end
 
     def create
-        @review = Review.create(review_params)
+        @review = Review.new(review_params)
+        @review.save
         redirect_to root_path
     end
 
     def show
         @review = Review.find(params[:id])
+    end
+
+    def edit
+        @review = Review.find(params[:id])
+        if @review.user != current_user
+            redirect_to root_path
+        end
+    end
+
+    def update
+        review = Review.find(params[:id])
+        review.update(review_params)
+        redirect_to root_path
+    end
+
+    def destroy
+        @review = Review.find(params[:id])
+        @review.destroy
+        redirect_to root_path
     end
 
     private
