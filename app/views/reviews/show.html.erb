@@ -1,7 +1,9 @@
 <%= render "shared/header" %>
-<%= @review.review_title %>
-<%= @review.image %>
-<%= @review.commic_title %>
-<%= @review.text %>
+<div class="contents">
+    <%= @review.review_title %>
+    <%= image_tag @review.image, class: "review-img" if @review.image.attached? %>
+    <%= @review.commic_title %>
+    <%= @review.text %>
+</div>
 
 <%= render "shared/footer" %>
