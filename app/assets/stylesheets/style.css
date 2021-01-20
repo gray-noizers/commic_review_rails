@@ -1,7 +1,5 @@
 .top-page-header{
-    padding: 20px;
-    font-size: large;
-    color: red;
+    padding: 0;
     background-color: yellow;
     display: flex;
     justify-content: space-around;
