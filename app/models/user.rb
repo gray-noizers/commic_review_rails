@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  belongs_to :reviews
+  has_many :reviews
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

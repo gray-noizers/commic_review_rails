@@ -1,4 +1,6 @@
 class Evaluation < ActiveHash::Base
+    
+
     self.data = [
         { id: 1, name: 'このマンガのオススメ度は？' },
         { id: 2, name: 'とてもオススメ！' },
