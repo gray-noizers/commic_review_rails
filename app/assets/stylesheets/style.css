@@ -41,6 +41,11 @@ li{
     flex-direction: row;
 }
 
+.review-img{
+    width: 33vh;
+    height: 33vh;
+}
+
 .review-title{
     align-items: center;
 }
