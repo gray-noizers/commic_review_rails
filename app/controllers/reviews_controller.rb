@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
     before_action :move_to_index, except: [:index, :show]
 
     def index
-        @review = Review.all
+        @review = Review.all.order("created_at DESC")
     end
 
     def new
@@ -11,8 +11,11 @@ class ReviewsController < ApplicationController
 
     def create
         @review = Review.new(review_params)
-        @review.save
-        redirect_to root_path
+        if @review.save
+            redirect_to root_path
+        else
+            render :new
+        end
     end
 
     def show
@@ -41,7 +44,7 @@ class ReviewsController < ApplicationController
     private
 
     def review_params
-        params.require(:review).permit(:review_title, :commic_title, :text, :evaluation_id, :image)
+        params.require(:review).permit(:review_title, :commic_title, :text, :evaluation_id, :image).merge(user_id: current_user.id)
     end
 
     def move_to_index

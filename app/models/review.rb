@@ -1,5 +1,8 @@
 class Review < ApplicationRecord
-    belongs_to :user, optional: true
+    extend ActiveHash::Associations::ActiveRecordExtensions
+
+    belongs_to :user
+    belongs_to :evaluation
     has_one_attached :image
     
 

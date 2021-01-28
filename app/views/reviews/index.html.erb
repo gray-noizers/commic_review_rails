@@ -15,8 +15,8 @@
       <li class="all-reviews">
         <%= link_to review_path(review.id) do %>
           <%= image_tag review.image, class: "review-img" if review.image.attached? %>
-          <%= review.review_title %>
-          <%= review.commic_title %>
+          <div class="review-title"><%= review.review_title %></div>
+          <div class="commic-title"><%= review.commic_title %></div>
         <% end %>
       </li>
     <% end %>

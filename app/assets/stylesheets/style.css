@@ -1,30 +1,65 @@
+.main{
+    background-color: red;
+}
+
 .top-page-header{
-    padding: 20px;
-    font-size: large;
-    color: red;
+    padding: 5px;
     background-color: yellow;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
 }
 
 .login-menu{
     padding: 5px;
-    display: block;
+    display: flex;
     justify-content: flex-end;
+    width: 15vw;
+    padding-left: 10vw;
 }
 
 li{
     list-style: none;
-    color: red;
-    border: 1px solid red;
+    color: yellow;
+    border: 1px solid black;
 }
 
-.index-image{
-    width: 100%;
+.review-img{
+    width: auto;
     height: auto;
 }
 
-.all-reviews{
+.reviews{
+    background-color: #FFF;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    padding: 10vh 0;
+    flex-wrap: wrap;
+}
+
+.all-reviews{
+    align-items: center;
+    flex-direction: row;
+}
+
+.review-img{
+    width: 33vh;
+    height: 33vh;
+}
+
+.review-title{
+    align-items: center;
+}
+
+.commic-title{
+    align-items: center;
+}
+
+.top-page-header{
+    display: flex;
+}
+
+.review-icon{
+    display: flex;
+    width: 30vw;
+    padding-left: 10px;
 }
