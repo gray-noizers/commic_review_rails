@@ -31,13 +31,21 @@ li{
 .reviews{
     background-color: #FFF;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     padding: 10vh 0;
     flex-wrap: wrap;
 }
 
 .all-reviews{
-    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.review-title{
+    align-items: center;
+}
+
+.commic-title{
     align-items: center;
 }
 
