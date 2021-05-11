@@ -3,8 +3,8 @@
     <%= @review.review_title %>
     <%= image_tag @review.image, class: "review-img" if @review.image.attached? %>
     <p>マンガのタイトル…<%= @review.commic_title %></p>
-    <%= @review.text %>
-    <%= @review.evaluation.name %>
+    <p><%= @review.text %></p>
+    <p><%= @review.evaluation.name %></p>
 </div>
 
 <div class="edit">
