@@ -23,11 +23,6 @@ li{
     border: 1px solid black;
 }
 
-.review-img{
-    width: auto;
-    height: auto;
-}
-
 .reviews{
     background-color: #FFF;
     display: flex;
